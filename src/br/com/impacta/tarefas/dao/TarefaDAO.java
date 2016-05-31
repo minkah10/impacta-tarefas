@@ -78,8 +78,7 @@ public class TarefaDAO {
 	
 	public Tarefa buscaPorId(Long id){
 		return	entityManager.find(Tarefa.class, id);
-		 
-		
+	
 	}
 
 }

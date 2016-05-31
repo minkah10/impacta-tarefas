@@ -27,7 +27,7 @@ public class TarefasController {
 
 		TarefaDAO dao = new TarefaDAO();
 		dao.adicionaTarefa(tarefa);
-		return "tarefa/adicionada";
+		return "redirect:listaTarefa";
 	}
 	
 	@RequestMapping("listaTarefa")
