@@ -61,10 +61,10 @@ public class TarefaDAO {
 
 	}
 
-	public void alteraContato(Tarefa tarefa) {
+	public void alteraTarefa(Tarefa tarefa) {
 		entityManager.getTransaction().begin();
 		entityManager.merge(tarefa);
-		entityManager.getTransaction().commit();
+		entityManager.getTransaction().commit();;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -73,4 +73,13 @@ public class TarefaDAO {
 
 		return query.getResultList();
 	}
+	
+	
+	
+	public Tarefa buscaPorId(Long id){
+		return	entityManager.find(Tarefa.class, id);
+		 
+		
+	}
+
 }
